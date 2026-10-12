@@ -1,12 +1,13 @@
 # Telco Customer Churn | Experimentación con MLflow
 
-Actividad individual TC5061 · Estructura organizada inspirada en CCDS y el proyecto de ejemplo del profesor (`ITESM_MNA_2026_MLFlow_Projects.zip`).
+Hay un PDF en docs para documentacion de la actividad
+Actividad individual TC5061 · Estructura organizadA CCDS 
 
 Se utiliza **Regresión Logística**
 
 ## Requisitos
 
-- Python **3.14** recomendado (use esa version). Las versiones están en `python_env.yaml`.
+- Python **3.14** recomendado (usé esa version). Las versiones están en `python_env.yaml`.
 - Dataset original `WA_Fn-UseC_-Telco-Customer-Churn.csv` utilizado en la actividad previa. Guardarlo exactamente en `data/raw/`.
 - VS Code, terminal zsh/bash/WSL, acceso al navegador.
 
@@ -39,8 +40,6 @@ Se utiliza **Regresión Logística**
 ```
 
 ## 1. Preparar entorno (ejecutar dentro de la carpeta raíz del proyecto)
-
-En macOS / Linux / WSL Ubuntu, terminal zsh o bash:
 
 ```bash
 python3.14 -m venv .venv      
@@ -94,4 +93,3 @@ mlflow run . --env-manager local --experiment-name Telco_Churn_Comparacion -P c=
 
 El ejercicio evalúa un conjunto de prueba fijo; el rendimiento puede variar con otra partición. Cambiar `max_iter` no necesariamente afecta resultados si el optimizador ya convergió. `class_weight=balanced` puede mejorar recall y reducir precisión. La selección del mejor modelo debe justificarse mediante evidencia real del registro MLflow, no con métricas previstas.
 
-Hay un PDF en docs para documentacion de la actividad
