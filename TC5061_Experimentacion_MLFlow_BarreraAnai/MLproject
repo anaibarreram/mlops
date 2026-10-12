@@ -1,0 +1,28 @@
+name: telco-churn-mlflow
+
+python_env: python_env.yaml
+
+entry_points:
+  main:
+    parameters:
+      data: {type: path, default: data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv}
+      c: {type: float, default: 1.0}
+      max_iter: {type: int, default: 1000}
+      class_weight: {type: string, default: none}
+      seed: {type: int, default: 42}
+    command: >-
+      python -m churn.modeling.train
+      --data {data} --c {c} --max-iter {max_iter}
+      --class-weight {class_weight} --seed {seed}
+
+  train:
+    parameters:
+      data: {type: path, default: data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv}
+      c: {type: float, default: 1.0}
+      max_iter: {type: int, default: 1000}
+      class_weight: {type: string, default: none}
+      seed: {type: int, default: 42}
+    command: >-
+      python -m churn.modeling.train
+      --data {data} --c {c} --max-iter {max_iter}
+      --class-weight {class_weight} --seed {seed}

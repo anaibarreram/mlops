@@ -1,0 +1,17 @@
+# Datos originales / preparados, modelos y artefactos locales
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+mlruns/
+mlartifacts/
+mlflow.db
+artifacts/
+data/raw/*.csv
+data/interim/*.csv
+data/processed/*.csv
+reports/figures/*.png
+.DS_Store
